@@ -1,0 +1,25 @@
+{
+  "name": "marathon-backend",
+  "version": "1.0.0",
+  "description": "Backend API server for Marathon Registration Portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check-db": "node check-db.js",
+    "seed": "node seed.js"
+  },
+  "keywords": [
+    "marathon",
+    "express",
+    "nodejs",
+    "registration"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^9.11.4"
+  }
+}

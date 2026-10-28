@@ -1,0 +1,394 @@
+/* ==============================================================================
+   [TECHNOLOGY 2 OF 5]: CSS3 (Styling, Light Theme & Responsive Layout)
+   College Review Presentation File #2
+   Color Palette: White (#ffffff), Light Blue (#eef6fc), Sporty Orange (#ff6b35)
+   ============================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #1e293b;
+  line-height: 1.6;
+  min-height: 100vh;
+  /* Whole-page marathon running background with light overlay for readability */
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+    url('https://img.magnific.com/premium-vector/flat-vector-marathon-running-sport-background-fitness-enthusiasts_1324823-18495.jpg?semt=ais_hybrid&w=740&q=80') center/cover no-repeat fixed,
+    url('/page-bg.jpg') center/cover no-repeat fixed;
+}
+
+.app-container {
+  width: 100%;
+}
+
+/* 1. Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ff6b35;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover {
+  color: #ff6b35;
+}
+
+.btn-nav-register {
+  background-color: #ff6b35;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.btn-nav-register:hover {
+  background-color: #e85923;
+}
+
+/* Common Buttons */
+.btn-orange {
+  background-color: #ff6b35;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-orange:hover {
+  background-color: #e85923;
+  transform: translateY(-1px);
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* 2. Home Section */
+.home-section {
+  position: relative;
+  padding: 4.5rem 5%;
+  background-color: transparent;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.home-text {
+  flex: 1;
+}
+
+.home-text h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.home-image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.marathon-img {
+  width: 100%;
+  max-width: 440px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* 3. Event Details Section (Light Blue tint) */
+.details-section {
+  padding: 4rem 5%;
+  background-color: rgba(238, 246, 252, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.35rem;
+}
+
+.section-title p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.details-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.detail-card {
+  background-color: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.detail-card h3 {
+  font-size: 1.15rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.detail-card p {
+  font-size: 1.05rem;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.card-sub {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* 4. Registration Form Section */
+.register-section {
+  padding: 4.5rem 5%;
+  background-color: transparent;
+}
+
+.form-box {
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.form-box h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff6b35;
+}
+
+/* Alerts */
+.error-alert {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.success-alert {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* 5. Registered Participants Table (Light Blue tint) */
+.table-section {
+  padding: 4rem 5%;
+  background-color: rgba(238, 246, 252, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.table-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.participants-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.participants-table th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.participants-table td {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.participants-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.badge {
+  background-color: #fff7ed;
+  color: #ff6b35;
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid #fed7aa;
+}
+
+.no-data {
+  text-align: center;
+  padding: 2.5rem;
+  color: #94a3b8;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem 5%;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-box {
+    padding: 2rem 1.25rem;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "marathon-registration-portal",
+  "version": "1.0.0",
+  "description": "Marathon Registration Portal - Web Technology Project",
+  "scripts": {
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "keywords": ["marathon", "web-technology", "react", "express", "nodejs"],
+  "author": "",
+  "license": "ISC"
+}
